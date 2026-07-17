@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/Rafael%20Teive/Downloads/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RVT Advogados — atuação em Direito Imobiliário em Teresina, Timon e região. Atendimento presencial e on-line.">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>RVT Advogados | Direito Imobiliário</title>
+
+  <style>
+    :root {
+      --black:#090909;
+      --black-2:#141414;
+      --gold:#c99a3d;
+      --gold-light:#e6c270;
+      --cream:#f6f1e8;
+      --white:#ffffff;
+      --muted:#c8c2b7;
+      --green:#1fa855;
+      --max:1180px;
+      --radius:20px;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:var(--black);
+      color:var(--white);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.6;
+    }
+
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    .container { width:min(var(--max), calc(100% - 40px)); margin:auto; }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(9,9,9,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(201,154,61,.25);
+    }
+
+    .nav {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand {
+      color:var(--gold-light);
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .navlinks {
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.95rem;
+      color:#e8e3d8;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-gold { background:linear-gradient(135deg,var(--gold-light),var(--gold)); color:#111; }
+    .btn-outline { border:1px solid rgba(230,194,112,.55); color:var(--gold-light); }
+    .btn-whatsapp { background:var(--green); color:#fff; }
+
+    .hero {
+      min-height:760px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(201,154,61,.18), transparent 30%),
+        linear-gradient(135deg,#080808,#151515 60%,#090909);
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.55));
+      pointer-events:none;
+    }
+
+    .hero-grid {
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:60px;
+      padding:80px 0;
+    }
+
+    .eyebrow {
+      color:var(--gold-light);
+      font-size:.88rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    h1 {
+      margin:0 0 22px;
+      font-size:clamp(2.5rem,5vw,5rem);
+      line-height:1.04;
+      letter-spacing:-.03em;
+    }
+
+    h1 span { color:var(--gold-light); }
+
+    .lead {
+      max-width:680px;
+      color:#ddd7cb;
+      font-size:1.15rem;
+      margin:0 0 28px;
+    }
+
+    .hero-actions {
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:28px;
+    }
+
+    .trust {
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      color:#bdb6aa;
+      font-size:.92rem;
+    }
+
+    .logo-card {
+      background:#0b0b0b;
+      border:1px solid rgba(201,154,61,.28);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .logo-card img {
+      width:100%;
+      height:auto;
+      object-fit:cover;
+    }
+
+    section { padding:92px 0; }
+
+    .section-light {
+      background:var(--cream);
+      color:#191919;
+    }
+
+    .section-title {
+      max-width:760px;
+      margin-bottom:42px;
+    }
+
+    .section-title h2 {
+      margin:0 0 14px;
+      font-size:clamp(2rem,4vw,3.4rem);
+      line-height:1.12;
+    }
+
+    .section-title p {
+      margin:0;
+      color:#6f685f;
+      font-size:1.05rem;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card {
+      background:#fff;
+      border:1px solid #e7dfd1;
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 12px 35px rgba(24,18,8,.07);
+    }
+
+    .card h3 {
+      margin:0 0 10px;
+      font-size:1.22rem;
+      color:#1d1a16;
+    }
+
+    .card p {
+      margin:0;
+      color:#6d665c;
+    }
+
+    .card .icon {
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#f1e5c9;
+      color:#8c641d;
+      font-weight:900;
+      margin-bottom:18px;
+    }
+
+    .about-grid {
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      align-items:center;
+      gap:60px;
+    }
+
+    .about-panel {
+      border:1px solid rgba(201,154,61,.25);
+      background:linear-gradient(145deg,#111,#1a1a1a);
+      border-radius:28px;
+      padding:38px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-panel h2 {
+      font-size:clamp(2rem,4vw,3.3rem);
+      margin:0 0 18px;
+    }
+
+    .about-panel p {
+      color:#d2ccbf;
+      margin:0 0 18px;
+    }
+
+    .list {
+      display:grid;
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .list div {
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      color:#e5dfd3;
+    }
+
+    .list b { color:var(--gold-light); }
+
+    .cta {
+      background:
+        linear-gradient(135deg,rgba(201,154,61,.18),rgba(0,0,0,.05)),
+        #111;
+    }
+
+    .cta-box {
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:40px;
+      align-items:center;
+      border:1px solid rgba(201,154,61,.28);
+      background:#0d0d0d;
+      border-radius:30px;
+      padding:44px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-box h2 {
+      margin:0 0 14px;
+      font-size:clamp(2rem,4vw,3.4rem);
+    }
+
+    .cta-box p {
+      margin:0;
+      color:#cfc8bb;
+    }
+
+    .contact-card {
+      background:#171717;
+      border-radius:22px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-card a {
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-card a:last-child { border-bottom:0; }
+
+    footer {
+      border-top:1px solid rgba(201,154,61,.2);
+      padding:34px 0;
+      background:#070707;
+      color:#aaa398;
+      font-size:.9rem;
+    }
+
+    .footer-grid {
+      display:flex;
+      justify-content:space-between;
+      gap:28px;
+      flex-wrap:wrap;
+    }
+
+    .whatsapp-float {
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:60;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green);
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 14px 30px rgba(0,0,0,.35);
+      border:3px solid rgba(255,255,255,.85);
+    }
+
+    .legal-note {
+      margin-top:18px;
+      font-size:.82rem;
+      color:#8f887d;
+    }
+
+    @media (max-width: 900px) {
+      .navlinks a:not(.btn) { display:none; }
+      .hero-grid, .about-grid, .cta-box {
+        grid-template-columns:1fr;
+      }
+      .hero { min-height:auto; }
+      .cards { grid-template-columns:1fr 1fr; }
+      .logo-card { max-width:640px; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width:min(100% - 28px,var(--max)); }
+      .cards { grid-template-columns:1fr; }
+      section { padding:70px 0; }
+      .hero-grid { padding:54px 0; gap:34px; }
+      .cta-box { padding:28px; }
+      .nav { min-height:68px; }
+      .btn { width:100%; }
+      .nav .btn { width:auto; padding:0 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">RVT ADVOGADOS</div>
+      <nav class="navlinks" aria-label="Navegação principal">
+        <a href="file:///C:/Users/Rafael%20Teive/Downloads/index.html#atuacao">Áreas de atuação</a>
+        <a href="file:///C:/Users/Rafael%20Teive/Downloads/index.html#sobre">Sobre</a>
+        <a href="file:///C:/Users/Rafael%20Teive/Downloads/index.html#contato">Contato</a>
+        <a class="btn btn-gold" href="https://wa.me/5586981797777?text=Ol%C3%A1,%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20um%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Direito Imobiliário • Teresina e região</div>
+          <h1>Segurança jurídica para decisões que envolvem <span>imóveis</span>.</h1>
+          <p class="lead">
+            Atuação em regularização imobiliária, usucapião, contratos,
+            inventários com imóveis, registros e ações possessórias.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/5586981797777?text=Ol%C3%A1,%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20um%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener">
+              Solicitar atendimento
+            </a>
+            <a class="btn btn-outline" href="file:///C:/Users/Rafael%20Teive/Downloads/index.html#atuacao">Conhecer a atuação</a>
+          </div>
+
+          <div class="trust">
+            <span>Atendimento presencial e on-line</span>
+            <span>Teresina • Timon • Região</span>
+            <span>Contato direto pelo WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="logo-card">
+          <img src="file:///C:/Users/Rafael%20Teive/Downloads/logo-rvt.png" alt="Logotipo RVT Advogados em dourado sobre fundo preto">
+        </div>
+      </div>
+    </section>
+
+    <section id="atuacao" class="section-light">
+      <div class="container">
+        <div class="section-title">
+          <div class="eyebrow">Áreas de atuação</div>
+          <h2>Atuação jurídica voltada às principais demandas imobiliárias.</h2>
+          <p>Orientação preventiva, análise documental e condução de medidas judiciais ou extrajudiciais, conforme o caso.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Usucapião</h3>
+            <p>Análise e condução de procedimentos judiciais e extrajudiciais.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Regularização de imóveis</h3>
+            <p>Escritura, registro, retificação, desmembramento e documentação imobiliária.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Contratos imobiliários</h3>
+            <p>Compra e venda, locação, permuta, distrato e análise de riscos.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Inventário com imóveis</h3>
+            <p>Orientação para partilha, transferência e regularização patrimonial.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">05</div>
+            <h3>Ações possessórias</h3>
+            <p>Reintegração, manutenção de posse e interdito proibitório.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">06</div>
+            <h3>Adjudicação compulsória</h3>
+            <p>Medidas para obtenção da propriedade quando a escritura não é outorgada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <div class="logo-card">
+          <img src="file:///C:/Users/Rafael%20Teive/Downloads/logo-rvt.png" alt="Identidade visual RVT Advogados">
+        </div>
+
+        <div class="about-panel">
+          <div class="eyebrow">RVT Advogados</div>
+          <h2>Atuação técnica, personalizada e orientada à segurança jurídica.</h2>
+          <p>
+            Atendimento voltado a pessoas, famílias, proprietários, compradores,
+            vendedores, locadores, locatários e empresas que precisam resolver
+            questões relacionadas a imóveis.
+          </p>
+
+          <div class="list">
+            <div><b>✓</b><span>Análise individualizada do caso e dos documentos.</span></div>
+            <div><b>✓</b><span>Atendimento presencial em Teresina e atendimento on-line.</span></div>
+            <div><b>✓</b><span>Comunicação clara sobre riscos, caminhos e providências.</span></div>
+            <div><b>✓</b><span>Atuação judicial e extrajudicial, conforme a necessidade.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="cta">
+      <div class="container cta-box">
+        <div>
+          <div class="eyebrow">Atendimento</div>
+          <h2>Precisa de orientação sobre um imóvel?</h2>
+          <p>
+            Envie uma mensagem pelo WhatsApp e informe, de forma resumida,
+            qual é a sua dúvida ou situação.
+          </p>
+          <div class="hero-actions" style="margin-top:24px;margin-bottom:0">
+            <a class="btn btn-whatsapp" href="https://wa.me/5586981797777?text=Ol%C3%A1,%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20um%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener">
+              Falar com RVT Advogados
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <a href="tel:+5586981797777"><strong>WhatsApp:</strong><br>(86) 98179-7777</a>
+          <a href="mailto:rafaelteive77@gmail.com"><strong>E-mail:</strong><br>rafaelteive77@gmail.com</a>
+          <a href="file:///C:/Users/Rafael%20Teive/Downloads/index.html#contato"><strong>Local de atendimento:</strong><br>Teresina – Piauí</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 RVT Advogados. Todos os direitos reservados.</div>
+      <div>Conteúdo informativo. A análise jurídica depende das particularidades de cada caso.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5586981797777?text=Ol%C3%A1,%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20um%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">WA</a>
+
+
+</body></html>
